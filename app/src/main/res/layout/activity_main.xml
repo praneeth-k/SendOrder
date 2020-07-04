@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16sp"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:hint="@string/name"
+            android:textCursorDrawable="@null" />
+
+        <TextView
+            android:id="@+id/toppings"
+            style="@style/header"
+            android:text="@string/toppings"/>
+
+        <CheckBox
+            android:id="@+id/addWhippedCream"
+            style="@style/checkbox"
+            android:text="@string/whipped_cream"/>
+
+        <CheckBox
+            android:id="@+id/addChocolate"
+            style="@style/checkbox"
+            android:text="@string/chocolate"/>
+
+        <TextView
+            android:id="@+id/quantityLabel"
+            style="@style/header"
+            android:text="@string/quantity_label"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/incrementButton"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:onClick="incrementQuantity"
+                android:text="@string/increment_label"
+                android:textAllCaps="true"/>
+
+            <TextView
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/initial_quantity"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/decrementButton"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:onClick="decrementQuantity"
+                android:text="@string/decrement_label"
+                android:textAllCaps="true"/>
+        </LinearLayout>
+<!--
+        <TextView
+            android:id="@+id/priceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_summary"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/initial_price"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp"/>-->
+
+        <Button
+            android:id="@+id/orderButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submitOrder"
+            android:text="@string/order"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+</ScrollView>
